@@ -1,6 +1,7 @@
 // Seleciona os elementos da página
 const cidade = document.querySelector('#cidade');
 const estado = document.querySelector('#estado');
+const contendo = document.querySelector('#contendo');
 const message = document.querySelector('#message');
 const downloadButton = document.querySelector('#download');
 const sendButton = document.querySelector('#send');
@@ -37,7 +38,7 @@ function convertToCSV(dataArray, headers) {
 sendButton.addEventListener("click", async () => {
   try {
     // Monta a URL para a requisição (verifique se a URL está correta conforme sua API)
-    const response = await fetch(`https://viacep.com.br/ws/${estado.value}/${cidade.value}/Domingos/json/`);
+    const response = await fetch(`https://viacep.com.br/ws/${estado.value}/${cidade.value}/${contendo.value}/json/`);
     
     if (!response.ok) {
       console.error('Erro na requisição');
@@ -80,7 +81,7 @@ downloadButton.addEventListener('click', () => {
   // Cria um link temporário e simula o clique para iniciar o download
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'dados.csv';
+  a.download = `CEP's ${cidade.value}-${estado.value}-${contendo.value}`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
