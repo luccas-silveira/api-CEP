@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download CSV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <div id="box-credit-card-info">
+      <form action="">
+        <input type="text" class="credit-card-input" placeholder="Cidade" id="cidade">
+        <input type="text" class="credit-card-input" placeholder="Estado" id="estado">
+      </form>
+      <span id="message"></span>
+    </div>
+   
+    <input class="styled" type="button" value="Buscar" id="send"/>
+    <!-- Botão de download oculto inicialmente -->
+    <input class="styled" type="button" value="Download" id="download" style="display: none;">
+
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
