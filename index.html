@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download CSV</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js" defer></script>
+  </head>
 <body>
-  <div class="container">
+  <div class="wrapper">
+    <h1>Buscar CEPs</h1>
 
     <div id="box-credit-card-info">
       <form action="">
-        <input type="text" class="credit-card-input" placeholder="Cidade" id="cidade">
-        <input type="text" class="credit-card-input" placeholder="Estado" id="estado">
-        <input type="text" class="credit-card-input" placeholder="Contendo" id="contendo">
+        <div class="linha">
+          <label for="cidade-input">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </label>
+          <input type="text" class="credit-card-input" placeholder="Cidade" id="cidade">
+        </div>
+        <div class="linha">
+          <label for="estado-input">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </label>
+          <input type="text" class="credit-card-input" placeholder="Estado" id="estado">
+          </div>
+          <div class="linha">
+            <label for="estado-input">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+          <input type="text" class="credit-card-input" placeholder="Contendo" id="contendo">
+        </div>
       </form>
       <span id="message"></span>
     </div>
@@ -24,6 +40,5 @@
     <input class="styled" type="button" value="Download" id="download" style="display: none;">
 
   </div>
-  <script src="index.js"></script>
 </body>
 </html>
