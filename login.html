@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input class="credit-card-input" type="email" id="email" placeholder="E-mail" required>
+      <input class="credit-card-input" type="password" id="senha" placeholder="Senha" required>
+      <input class="styled" type="submit" value="Entrar">
+    </form>
+    <p>Ainda não tem conta? <a href="register.html">Registre-se</a></p>
+    <span id="message"></span>
+  </div>
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const message = document.getElementById('message');
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      const response = await fetch('/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, senha })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        window.location.href = '/dashboard'; // redireciona para a página principal
+      } else {
+        message.textContent = data.error;
+      }
+    });
+  </script>
+</body>
+</html>
