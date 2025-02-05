@@ -69,7 +69,7 @@ form {
 
 form > div {
   width: 630px;
-  max-width: 84%;
+  max-width: 100%;
   min-width: 0%;
   margin: 11px auto;
   display: flex;
@@ -165,7 +165,7 @@ form button:hover,
   form label,
   form input {
     height: 50px;
-    width: 84%;
+    width: 100%;
   }
   
   form label {
@@ -200,7 +200,7 @@ form button:hover,
   form label,
   form input {
     height: 45px;
-    width: 84%;
+    width: 100%;
   }
   
   form label {
